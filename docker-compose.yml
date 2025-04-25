@@ -1,0 +1,32 @@
+#version: '3.8'
+#services:
+#  postgres:
+#    image: postgres:14
+#    container_name: postgres-api
+#    environment:
+#      POSTGRES_USER: james
+#      POSTGRES_PASSWORD: james123
+#      POSTGRES_DB: apidb
+#    ports:
+#      - "5432:5432"
+#    volumes:
+#      - postgres_data:/var/lib/postgresql/data
+#
+#volumes:
+#  postgres_data:
+
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    container_name: product-postgres
+    environment:
+      POSTGRES_DB: productdb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password123
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
